@@ -39,6 +39,8 @@ class MainActivity : AppCompatActivity() {
         println(douleIt.invoke(8))
         println(douleIt(8))
         println()
+        println()
+        println()
 
 
     }}
