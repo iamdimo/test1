@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -27,7 +28,13 @@ class Shahin : AppCompatActivity() {
         }
 
 
+        binding.myIntent.setOnClickListener {
+            val query =  binding.etIntent.text.toString()
+            val intent = Intent(this,Shahin::class.java)
+            intent.putExtra("query",query);
+            startActivity(intent)
 
+        }
         val ages: List<Int> = listOf(24, 25, 84, 32, 48)
         //val names: List<String> = listOf("Ali", "David", "Jack")
         val oddNumbers: MutableList<Int> = mutableListOf()

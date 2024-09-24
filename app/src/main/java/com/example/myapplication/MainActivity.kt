@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+
         val douleIt : (Int) -> Double = {
             it * 4.0
         }
