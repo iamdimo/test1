@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Shahin">
+
+
+    <!--    <include-->
+    <!--        android:id="@+id/my_toolbar"-->
+    <!--        layout="@layout/toolbar"-->
+    <!--        android:paddingLeft="0dp"-->
+    <!--        android:paddingRight="0dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+
+    <EditText
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#D9D9D9"
+        android:drawableEnd="@drawable/calendar"
+        android:drawablePadding="12dp"
+        android:hint="تاریخ"
+        android:inputType="date"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:drawablePadding="16dp"
+        android:hint="وزن مورد نظر خود را وارد نمایید"
+        android:layoutDirection="rtl"
+        android:textDirection="rtl"
+        app:endIconDrawable="@drawable/category"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:startIconDrawable="@drawable/wallet">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/material_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:textDirection="rtl"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:drawablePadding="16dp"
+        android:hint="قد مورد نظر خود را وارد نمایید"
+        android:layoutDirection="rtl"
+        android:textDirection="rtl"
+        app:endIconDrawable="@drawable/close_input"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:startIconDrawable="@drawable/calendar">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/material_et2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+<com.google.android.material.switchmaterial.SwitchMaterial
+    android:id="@+id/my_switch"
+    app:layout_constraintTop_toBottomOf="@id/textInputLayout1"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_vertical"
+        android:id="@+id/my_tv"
+        style="@style/Widget.BMICalcilator.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/my_switch"
+        tools:text="hello its me"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.Material3.Button.Icon"
+        app:icon="@drawable/wallet"
+        android:id="@+id/my_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/my_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Click"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
