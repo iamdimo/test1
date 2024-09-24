@@ -33,6 +33,14 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        binding.myIntent.setOnClickListener {
+            val query =  binding.etIntent.text.toString()
+            val intent = Intent(this,Shahin::class.java)
+            intent.putExtra("query",query);
+            startActivity(intent)
+
+        }
+
         val douleIt : (Int) -> Double = {
             it * 4.0
         }
@@ -40,8 +48,6 @@ class MainActivity : AppCompatActivity() {
         println(douleIt(8))
         println()
         println()
-        println()
-
 
     }}
 
